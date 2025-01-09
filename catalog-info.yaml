@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: xeyc652nh-go-gitops
+  description: This is GitOps manifest for xeyc652nh-go   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-name: xeyc652nh-go
+    backstage.io/kubernetes-id: xeyc652nh-go 
+    backstage.io/techdocs-ref: dir:. 
+    github.com/project-slug: rhtap-test-organization-jk/xeyc652nh-go-gitops   
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:xeyc652nh-go
